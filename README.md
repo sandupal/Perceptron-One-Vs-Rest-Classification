@@ -11,4 +11,8 @@ Each image is 28 X 28 pixels. An image can be viewed as a
  then designate $y = 2$ as the positive class, and all other digits as the negative class.
  For each image, do this two-way classi cation for all 10 digits. Train 10 perceptrons
  that will collectively learn to classify the handwritten digits in the MNIST dataset. Each
- perceptron will have 785 inputs and one output.
+ perceptron will have 785 inputs and one output. For each image in the test set, find the overall test accuracy.
+ An example will be considered labeled correctly if the perceptron classication of the true label has the
+ highest probability. So for instance, if the true label was 2 for an image, then it would be
+ counted as correctly classified if the perceptron test of 2 vs. {0,1,3,4,5,6,7,8,9}
+ had the highest probability of all the 10 2-way classi cations.
